@@ -34,13 +34,14 @@ For details, see Gandhi, Navarro, and Rivers (2020).
 \examples{
 require(gnrprod)
 data <- colombian
+\dontrun{
 industry_311_flex <- gnrflex(output = "RGO", fixed = c("L", "K"),
                              flex = "RI", share = "share", id = "id",
                              time = "year", data = data,
                              control = list(degree_w = 2, maxit = 200))
 
 industry_311_fixed <- gnriv(industry_311_flex,
-                            control = list(trace = 1))
+                            control = list(trace = 1))}
 }
 \references{
 Gandhi, Amit, Salvador Navarro, and David Rivers. 2020. "On the Identification of Gross Output Production Functions." \emph{Journal of Political Economy}, 128(8): 2973-3016. \doi{10.1086/707736}.
